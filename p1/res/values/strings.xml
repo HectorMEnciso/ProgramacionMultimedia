@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PRIMER PROGRAMA ANDROID</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="nombre">Escriba su nombre:</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="title_activity_saludo">PROGRAMA SALUDADOR</string>
+    <string name="Button1">Volver</string>
+    
+
+</resources>
