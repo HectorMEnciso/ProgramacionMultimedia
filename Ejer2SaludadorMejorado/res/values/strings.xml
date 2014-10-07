@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Ejer2Saludador</string>
+    <string name="tituloActividad">Segunda Ventana </string>
+    <string name="action_settings">Settings</string>
+    <string name="Boton">Salúdame</string>
+    <string name="TextoVista">Introduzca su nombre: </string>
+     <string name="botonVolver">Volver </string>
+
+</resources>
