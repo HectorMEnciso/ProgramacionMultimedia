@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AlarmaCalendarioSonido</string>
+    <string name="hello_world">Seleccione opción</string>
+    <string name="textoBotonAlarma">Configurar alarma</string>
+    <string name="textoBotonCalendario">Configurar evento</string>
+	<string name="textoBotonSonido">Reproducir sonido</string>
+</resources>
