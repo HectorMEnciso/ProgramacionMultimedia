@@ -67,7 +67,7 @@ public class MainActivity extends Activity {
 	public void onClickSonidoDos(View view) {
 		try {
 		Intent it = new Intent(android.content.Intent.ACTION_VIEW);
-		Uri uri = Uri.parse("file:///mnt/sdcard2/musica/m1.mp3.mp3");
+		Uri uri = Uri.parse("file:///storage/emulated/0//data/Kalimba.mp3");
 		it.setDataAndType(uri, "audio/mp3");
 		startActivity(it);
 		// create chooser for that intent
