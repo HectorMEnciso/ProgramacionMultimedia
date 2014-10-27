@@ -1,8 +1,10 @@
 package com.example.c2practica2_1ejeralarmacalendariosonido;
 
+import java.io.File;
 import java.util.Random;
 
 import android.app.Activity;
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -56,21 +58,25 @@ public class MainActivity extends Activity {
 	public void onClickSonido(View view) {
 
 		MediaPlayer mediaPlayer = MediaPlayer.create(getBaseContext(),R.raw.applause);
-		Toast toast = Toast.makeText(getBaseContext(),
-				"Reproduciendo sonido...", Toast.LENGTH_LONG);
+		Toast toast = Toast.makeText(getBaseContext(),"Reproduciendo sonido...", Toast.LENGTH_LONG);
 
 		toast.show();
 		mediaPlayer.start();
 	}
 
 	public void onClickSonidoDos(View view) {
-		Intent i = new Intent("andriod.intent.action.MUSIC_PLAYER")
-				.putExtra(
-						Intent.EXTRA_STREAM,
-						Uri.parse("android.resource://com.my.android.sharesound/"
-								+ R.raw.applause));
-		startActivity(i);
+		try {
+		Intent it = new Intent(android.content.Intent.ACTION_VIEW);
+		Uri uri = Uri.parse("file:///mnt/sdcard2/musica/m1.mp3.mp3");
+		it.setDataAndType(uri, "audio/mp3");
+		startActivity(it);
+		// create chooser for that intent
+		} catch(ActivityNotFoundException ex) {
+		    // if no app handles it, do nothing
+		}
 	}
+	
+	//http://www.javaya.com.ar/androidya/detalleconcepto.php?codigo=156
 	public void onClickRandom(View view) {
 		 Random rnd = new Random();
 		
