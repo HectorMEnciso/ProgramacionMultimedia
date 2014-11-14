@@ -9,17 +9,17 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:layout_marginBottom="5dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginBottom="25dp"
+        android:layout_marginTop="30dp"
         android:background="#DFDFDF"
         android:ems="10"
         android:gravity="right"
-        android:inputType="text"
         android:textSize="30sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.24"
         android:gravity="center_horizontal" >
 
         <TableLayout
@@ -38,8 +38,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
-                    android:background="@drawable/miboton"
-                    android:text="1" />
+                    android:textSize="30sp"
+                    android:background="@drawable/estilos_botones"
+                    android:text="@string/boton1" />
 
                 <Button
                     android:id="@+id/boton2"
@@ -47,8 +48,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
-                    android:background="@drawable/miboton"
-                    android:text="2" />
+                    android:textSize="30sp"
+                    android:background="@drawable/estilos_botones"
+                    android:text="@string/boton2" />
 
                 <Button
                     android:id="@+id/boton3"
@@ -57,8 +59,9 @@
                     android:layout_marginBottom="10dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
-                    android:background="@drawable/miboton"
-                    android:text="3" />
+                    android:textSize="30sp"
+                    android:background="@drawable/estilos_botones"
+                    android:text="@string/boton3" />
             </TableRow>
 
             <TableRow
@@ -70,16 +73,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:background="@drawable/miboton"
-                    android:text="4" />
+                    android:textSize="30sp"
+                    android:background="@drawable/estilos_botones"
+                    android:text="@string/boton4" />
 
                 <Button
                     android:id="@+id/boton5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:background="@drawable/miboton"
-                    android:text="5" />
+                    android:textSize="30sp"
+                    android:background="@drawable/estilos_botones"
+                    android:text="@string/boton5" />
 
                 <Button
                     android:id="@+id/boton6"
@@ -87,8 +92,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:layout_marginLeft="10dp"
-                    android:background="@drawable/miboton"
-                    android:text="6" />
+                    android:textSize="30sp"
+                    android:background="@drawable/estilos_botones"
+                    android:text="@string/boton6" />
             </TableRow>
 
             <TableRow
@@ -101,24 +107,27 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:layout_marginLeft="10dp"
-                    android:background="@drawable/miboton"
-                    android:text="7" />
+                    android:textSize="30sp"
+                    android:background="@drawable/estilos_botones"
+                    android:text="@string/boton7" />
 
                 <Button
                     android:id="@+id/boton8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:background="@drawable/miboton"
-                    android:text="8" />
+                    android:textSize="30sp"
+                    android:background="@drawable/estilos_botones"
+                    android:text="@string/boton8" />
 
                 <Button
                     android:id="@+id/boton9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:background="@drawable/miboton"
-                    android:text="9" />
+                    android:textSize="30sp"
+                    android:background="@drawable/estilos_botones"
+                    android:text="@string/boton9" />
             </TableRow>
 
             <TableRow
@@ -129,10 +138,44 @@
                     android:id="@+id/boton0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
                     android:layout_marginLeft="10dp"
+                    android:textSize="30sp"
                     android:layout_span="3"
-                    android:background="@drawable/miboton"
-                    android:text="0" />
+                    android:background="@drawable/estilos_botones"
+                    android:text="@string/boton0" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/botonDividir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="30sp"
+                    android:background="@drawable/estilos_botones"
+                    android:text="@string/botonDividir" />
+
+                <Button
+                    android:id="@+id/botonMultiplicar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="30sp"
+                    android:background="@drawable/estilos_botones"
+                    android:text="@string/botonMultiplicar" />
+
+                <Button
+                    android:id="@+id/botonRestar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="30sp"
+                    android:background="@drawable/estilos_botones"
+                    android:text="@string/botonRestar" />
+
             </TableRow>
         </TableLayout>
 
@@ -147,17 +190,20 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="30sp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/miboton"
-                android:text="=" />
+                android:background="@drawable/estilos_botones"
+                android:text="@string/botonIgual" />
 
             <Button
-                android:id="@+id/botonMas"
+                android:id="@+id/botonSumar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/miboton"
-                android:text="+" />
+                android:textSize="30sp"
+                android:background="@drawable/estilos_botones"
+                android:text="@string/botonSumar" />
 
             <Button
                 android:id="@+id/botonBorrar"
@@ -165,9 +211,10 @@
                 android:layout_height="108dp"
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="10dp"
+                android:textSize="30sp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/miboton"
-                android:text="C" />
+                android:background="@drawable/estilos_botones"
+                android:text="@string/botonBorrar" />
         </LinearLayout>
     </LinearLayout>
 

@@ -7,22 +7,25 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 
-
-public class MainActivity extends Activity implements OnClickListener {
+public class MainActivity extends Activity implements OnClickListener {//Se implementa la interfaz OnClickListener y se recogen los eventos en el método onClick()
+	/*
+	 * Declaramos las referencias de los controles del layout globalmente para poder utlilizarlos en cualquier parte de la clase.
+	 * */
 	TextView CajaTexto;
 	Button boton1, boton2, boton3, boton4, boton5, boton6, boton7, boton8,
-			boton9, boton0, botonMas, botonIgual, botonBorrar;
-	String resultado = "";
-	String valor1, valor2;
-	int resulFinal;
+			boton9, boton0, botonSumar, botonIgual, botonBorrar, botonRestar,
+			botonDividir, botonMultiplicar;
+	String resultado = "", tipoOperacion = "";//resultado es donde almacenamos los numeros como string // En tipoOperacion guardamos el tipo de operacion(suma +, resta -, multiplicacion * y division /)
+	String valor1, valor2;//Guardamos el primer y el segundo valor como string respectivamente.
+	int resulFinal;//Variable que guarda el resultado final de las operaciones.
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		super.onCreate(savedInstanceState);//Con super invocamos al metodo onCreate de la superclase
+		setContentView(R.layout.activity_main);//Establece el layout "activity_main"
 
-		CajaTexto = (TextView) findViewById(R.id.textView);
-		CajaTexto.setOnClickListener(this);
+		CajaTexto = (TextView) findViewById(R.id.textView);//Obtenemos la referencia a CajaTexto
+		CajaTexto.setOnClickListener(this);//Definimos el escuchador para CajaTexto
 		boton1 = (Button) findViewById(R.id.boton1);
 		boton1.setOnClickListener(this);
 		boton2 = (Button) findViewById(R.id.boton2);
@@ -43,20 +46,31 @@ public class MainActivity extends Activity implements OnClickListener {
 		boton9.setOnClickListener(this);
 		boton0 = (Button) findViewById(R.id.boton0);
 		boton0.setOnClickListener(this);
-		botonMas = (Button) findViewById(R.id.botonMas);
-		botonMas.setOnClickListener(this);
 		botonIgual = (Button) findViewById(R.id.botonIgual);
 		botonIgual.setOnClickListener(this);
 		botonBorrar = (Button) findViewById(R.id.botonBorrar);
 		botonBorrar.setOnClickListener(this);
+
+		botonSumar = (Button) findViewById(R.id.botonSumar);
+		botonSumar.setOnClickListener(this);
+
+		botonRestar = (Button) findViewById(R.id.botonRestar);
+		botonRestar.setOnClickListener(this);
+
+		botonDividir = (Button) findViewById(R.id.botonDividir);
+		botonDividir.setOnClickListener(this);
+
+		botonMultiplicar = (Button) findViewById(R.id.botonMultiplicar);
+		botonMultiplicar.setOnClickListener(this);
+
 	}
 
 	public void onClick(View v) {
-		resultado = CajaTexto.getText().toString();
-		switch (v.getId()) {
+		resultado = CajaTexto.getText().toString();//Obtenemos el texto de CajaTexto y lo convertimos a String.
+		switch (v.getId()) {//Obtenemos el Id de cada elemento del layout.
 		case (R.id.boton1):
-			resultado = resultado + "1";
-			CajaTexto.setText(resultado);
+			resultado = resultado + "1";//Concatenamos a resultado el valor del Boton 1
+			CajaTexto.setText(resultado);//Pasamos resultado a la CajaTexto.
 			break;
 		case (R.id.boton2):
 			resultado = resultado + "2";
@@ -98,11 +112,45 @@ public class MainActivity extends Activity implements OnClickListener {
 			CajaTexto.setText("");
 			break;
 		case (R.id.botonIgual):
-			valor2 = resultado;
-			resulFinal = Integer.parseInt(valor1) + Integer.parseInt(valor2);
-			CajaTexto.setText(Integer.toString(resulFinal));
+			valor2 = resultado;//Guardamos el valor del segundo dato introducido
+			switch (tipoOperacion) {//En función del tipo de operación entrará a sumar, restar, multiplicar o dividir.
+			case "+":
+				resulFinal = Integer.parseInt(valor1)//Guardamos el resultado de la operación.
+						+ Integer.parseInt(valor2);
+				break;
+			case "-":
+				resulFinal = Integer.parseInt(valor1)
+						- Integer.parseInt(valor2);
+				break;
+			case "*":
+				resulFinal = Integer.parseInt(valor1)
+						* Integer.parseInt(valor2);
+				break;
+
+			case "/":
+				resulFinal = Integer.parseInt(valor1)
+						/ Integer.parseInt(valor2);
+				break;
+			}
+			CajaTexto.setText(Integer.toString(resulFinal));//Le pasamos el resultado final a CajaTexto como String
 			break;
-		case (R.id.botonMas):
+		case (R.id.botonSumar):
+			tipoOperacion = "+";//Definimos el tipo de operación
+			valor1 = resultado;//Almacenamos en valor lo que había en CajaTexto
+			CajaTexto.setText("");//Borramos el texto de CajaTexto
+			break;
+		case (R.id.botonRestar):
+			tipoOperacion = "-";
+			valor1 = resultado;
+			CajaTexto.setText("");
+			break;
+		case (R.id.botonDividir):
+			tipoOperacion = "/";
+			valor1 = resultado;
+			CajaTexto.setText("");
+			break;
+		case (R.id.botonMultiplicar):
+			tipoOperacion = "*";
 			valor1 = resultado;
 			CajaTexto.setText("");
 			break;

@@ -2,5 +2,21 @@
 <resources>
 
     <string name="app_name">Calculadora Basica</string>
+    <string name="boton1">1</string>
+    <string name="boton2">2</string>
+    <string name="boton3">3</string>
+    <string name="boton4">4</string>
+    <string name="boton5">5</string>
+    <string name="boton6">6</string>
+    <string name="boton7">7</string>
+    <string name="boton8">8</string>
+    <string name="boton9">9</string>
+    <string name="boton0">0</string>
+    <string name="botonSumar">+</string>
+    <string name="botonIgual">=</string>
+    <string name="botonBorrar">C</string>
+    <string name="botonRestar">-</string>
+    <string name="botonMultiplicar">X</string>
+        <string name="botonDividir">÷</string>
 
 </resources>

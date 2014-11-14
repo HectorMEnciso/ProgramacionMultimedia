@@ -1068,8 +1068,8 @@ containing a value of this type.
         public static final int abc_textfield_searchview_holo_light=0x7f020054;
         public static final int abc_textfield_searchview_right_holo_dark=0x7f020055;
         public static final int abc_textfield_searchview_right_holo_light=0x7f020056;
-        public static final int ic_launcher=0x7f020057;
-        public static final int miboton=0x7f020058;
+        public static final int estilos_botones=0x7f020057;
+        public static final int ic_launcher=0x7f020058;
     }
     public static final class id {
         public static final int action_bar=0x7f05001c;
@@ -1096,9 +1096,12 @@ containing a value of this type.
         public static final int boton7=0x7f050044;
         public static final int boton8=0x7f050045;
         public static final int boton9=0x7f050046;
-        public static final int botonBorrar=0x7f05004a;
-        public static final int botonIgual=0x7f050048;
-        public static final int botonMas=0x7f050049;
+        public static final int botonBorrar=0x7f05004d;
+        public static final int botonDividir=0x7f050048;
+        public static final int botonIgual=0x7f05004b;
+        public static final int botonMultiplicar=0x7f050049;
+        public static final int botonRestar=0x7f05004a;
+        public static final int botonSumar=0x7f05004c;
         public static final int checkbox=0x7f05002d;
         public static final int collapseActionView=0x7f05000d;
         public static final int default_activity_button=0x7f050028;
@@ -1243,6 +1246,22 @@ containing a value of this type.
          */
         public static final int abc_shareactionprovider_share_with_application=0x7f0a000b;
         public static final int app_name=0x7f0a000d;
+        public static final int boton0=0x7f0a0017;
+        public static final int boton1=0x7f0a000e;
+        public static final int boton2=0x7f0a000f;
+        public static final int boton3=0x7f0a0010;
+        public static final int boton4=0x7f0a0011;
+        public static final int boton5=0x7f0a0012;
+        public static final int boton6=0x7f0a0013;
+        public static final int boton7=0x7f0a0014;
+        public static final int boton8=0x7f0a0015;
+        public static final int boton9=0x7f0a0016;
+        public static final int botonBorrar=0x7f0a001a;
+        public static final int botonDividir=0x7f0a001d;
+        public static final int botonIgual=0x7f0a0019;
+        public static final int botonMultiplicar=0x7f0a001c;
+        public static final int botonRestar=0x7f0a001b;
+        public static final int botonSumar=0x7f0a0018;
     }
     public static final class style {
         /** 
