@@ -22,30 +22,28 @@ public class MainActivity extends Activity {
 	int i=0;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		//Toast.makeText(getBaseContext(), "llego aqui", Toast.LENGTH_SHORT);
+		Toast.makeText(getBaseContext(), titulo[i], Toast.LENGTH_SHORT).show();
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		try {
-			// open the file for reading
-			InputStream instream = new FileInputStream("/data/canciones.txt");
 			
-			// if file the available for reading
-			if (instream != null) {// prepare the file for reading
+			InputStream instream = new FileInputStream("/data/canciones.txt");// open the file for reading
+			
+			if (instream != null) {
 				InputStreamReader inputreader = new InputStreamReader(instream);
 				BufferedReader buffreader = new BufferedReader(inputreader);
 
 				do {
 					titulo[i] = buffreader.readLine();
-					ArrayAdapter<String> adaptador= new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,titulo[i]);
-					ListView LstOpciones = (ListView)findViewById(R.id.LstOpciones);
-					LstOpciones.setAdapter(adaptador);
-					Toast.makeText(getBaseContext(), titulo[i], Toast.LENGTH_SHORT);
+					Toast.makeText(getBaseContext(), titulo[i], Toast.LENGTH_SHORT).show();
 					i++;
-					// do something with the line
-				} while (titulo != null);
+				} while (titulo[i] != null);
 				
+				ArrayAdapter<String> adaptador= new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,titulo);
+				ListView LstOpciones = (ListView)findViewById(R.id.LstOpciones);
+				LstOpciones.setAdapter(adaptador);
 			}
-		} catch (Exception ex) {// print stack trace.
+		} catch (Exception ex) {
 			System.out.println("error: "+ex);
 		} 
 		
