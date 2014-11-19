@@ -15,38 +15,31 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-
 public class MainActivity extends Activity {
-	String[] titulo=new String[10];
-	
-	int i=0;
+	String[] titulo = new String[10];
+	String linea;
+	int i = 0;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		Toast.makeText(getBaseContext(), titulo[i], Toast.LENGTH_SHORT).show();
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		try {
-			
-			InputStream instream = new FileInputStream("/data/canciones.txt");// open the file for reading
-			
-			if (instream != null) {
-				InputStreamReader inputreader = new InputStreamReader(instream);
-				BufferedReader buffreader = new BufferedReader(inputreader);
-
-				do {
-					titulo[i] = buffreader.readLine();
-					Toast.makeText(getBaseContext(), titulo[i], Toast.LENGTH_SHORT).show();
-					i++;
-				} while (titulo[i] != null);
-				
-				ArrayAdapter<String> adaptador= new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,titulo);
-				ListView LstOpciones = (ListView)findViewById(R.id.LstOpciones);
-				LstOpciones.setAdapter(adaptador);
+			BufferedReader fileIn = new BufferedReader(new FileReader("/data/canciones.txt"));
+			while ((linea = fileIn.readLine()) != null) {
+				titulo[i] = fileIn.readLine();
+				ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this,
+				android.R.layout.simple_list_item_1, titulo);// Creamos adaptador
+				ListView lstOpciones = (ListView) findViewById(R.id.LstOpciones);
+				lstOpciones.setAdapter(adaptador);// Asignamos al control LstOpciones
+				i++;
+				linea = fileIn.readLine();
 			}
-		} catch (Exception ex) {
-			System.out.println("error: "+ex);
-		} 
-		
-		
+			fileIn.close();
+		} catch (FileNotFoundException e) {
+			Toast.makeText(getBaseContext(), "Fichero no encontrado",Toast.LENGTH_LONG).show();
+		} catch (IOException e) {
+			Toast.makeText(getBaseContext(), "Error E/S", Toast.LENGTH_LONG).show();
+		}
 	}
+
 }
