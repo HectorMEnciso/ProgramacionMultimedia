@@ -13,11 +13,11 @@ public class MainActivity extends Activity {
     private ListView LstOpciones;
 
     private Cancion[] datos = new Cancion[]{
-            new Cancion("Título 1", "autor1", "3:20"),
-            new Cancion("Título 2", "autor2", "4:30"),
-            new Cancion("Título 3", "autor3", "3:45"),
-            new Cancion("Título 4", "autor4", "2:59"),
-            new Cancion("Título 5", "autor5", "3:50")};
+            new Cancion(R.drawable.heart,"Título 1", "autor1", "3:20"),
+            new Cancion(R.drawable.heart,"Título 2", "autor2", "4:30"),
+            new Cancion(R.drawable.heart,"Título 3", "autor3", "3:45"),
+            new Cancion(R.drawable.heart,"Título 4", "autor4", "2:59"),
+            new Cancion(R.drawable.heart,"Título 5", "autor5", "3:50")};
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
