@@ -1,5 +1,14 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
-    <item android:id="@+id/action_settings" android:title="@string/action_settings"
-        android:orderInCategory="100" android:showAsAction="never" />
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/AnadirCancion"
+        android:title="Añadir una Canción"
+        android:icon="@drawable/add">
+     </item>
+    <item android:id="@+id/BorrarTodas"
+        android:title="Borrar todas"
+        android:icon="@android:drawable/ic_menu_compass">
+    </item>
+    <item android:id="@+id/GuardarFichero"
+        android:title="Guardar en fichero"
+        android:icon="@android:drawable/ic_menu_agenda">
+    </item>
 </menu>
