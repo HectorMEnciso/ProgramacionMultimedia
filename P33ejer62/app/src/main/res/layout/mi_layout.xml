@@ -1,30 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
     <ImageView
         android:id="@+id/foto"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"/>
     <TextView
         android:id="@+id/lblTitulo"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textSize="20px"
+        android:textSize="20dp"
+        android:layout_toRightOf="@+id/foto"
         android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/lblAutor"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="12px"
+        android:textSize="10dp"
+        android:layout_below="@+id/lblTitulo"
+        android:layout_toRightOf="@+id/foto"
         android:textStyle="normal"/>
 
     <TextView
         android:id="@+id/lblDuracion"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="top"
-        android:textSize="20px"
+        android:layout_alignParentRight="true"
+        android:textSize="15dp"
+        android:textColor="#008080"
         android:textStyle="bold"/>
-</LinearLayout>
+</RelativeLayout>
